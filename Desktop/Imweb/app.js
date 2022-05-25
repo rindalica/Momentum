@@ -71,13 +71,13 @@ const cards = document.querySelector(".cards");
 const cardModals = document.querySelector(".cardModals")
 
 cards.innerHTML = cardList.map(function(card){
-    return  "<div>"
-                + "<div class='card'>"
-                    + "<img alt='cardImg' class='cardImg' src=" +  card.img + "></img>"
-                    + "<div class='cardTitle'>" + card.title + "</div>"
-                    + "<div class='cardContents'>" + card.content + "</div>"
-                + "</div>"
-            + "</div>"
+    return  `<div>
+                <div class='card'>
+                    <img alt='cardImg' class='cardImg' src=${card.img}></img>
+                    <div class='cardTitle'>${card.title}</div>
+                    <div class='cardContents'>${card.content}</div>
+                </div>
+            </div>`
 }).join("");
 
 const card = document.querySelectorAll(".card");
